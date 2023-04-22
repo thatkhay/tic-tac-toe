@@ -38,6 +38,8 @@ function cellClicked(){
 function updateCell(cell, index){
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
+
+    
 }
 
  function changePlayer(){
@@ -83,6 +85,9 @@ function restartGame( ){
     currentPlayer = "X"
   options = ["", "", "", "", "", "", "", "", ""];
     statusText.textContent = `${currentPlayer}'s turn`
-    cells.forEach(cell => cell.textContent = "");
+    cells.forEach(cell => {
+        cell.textContent = "";
+        
+      });
     running = true;
 }
